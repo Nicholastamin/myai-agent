@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyAI Agent V3</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyAI Agent V5</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="app">
+
+<div class="app">
+
     <header>
-      <h1>MyAI Agent V3</h1>
-      <p>AI lokal • tanpa API key • bisa belajar dari contoh</p>
+        <h1>🤖 MyAI Agent V5</h1>
+        <p>AI Agent • Search • Memory • Learning</p>
     </header>
 
-    <section id="chat" class="chat"></section>
+    <div id="chat"></div>
 
-    <div class="quick">
-      <button onclick="demoTeach()">Cara mengajar</button>
-      <button onclick="sendQuick('berapa 25 * 4')">Kalkulator</button>
-      <button onclick="sendQuick('simpan catatan belajar fisika')">Catatan</button>
-      <button onclick="sendQuick('apa yang kamu pelajari')">Status belajar</button>
+    <div class="buttons">
+
+        <button onclick="contoh('Apa arti iklim?')">
+            🔎 Search
+        </button>
+
+        <button onclick="contoh('Hitung 25 kali 4')">
+            🧮 Kalkulator
+        </button>
+
+        <button onclick="contoh('Apa yang kamu ingat?')">
+            🧠 Memory
+        </button>
+
+        <button onclick="caraBelajar()">
+            📚 Belajar
+        </button>
+
     </div>
 
-    <form id="form">
-      <input id="input" autocomplete="off" placeholder="Ketik perintah atau ajarkan AI..." />
-      <button type="submit">Kirim</button>
-    </form>
+    <div class="input-area">
 
-    <div class="info">
-      <span id="status">Memuat model...</span>
-      <button class="danger" onclick="resetAI()">Reset pembelajaran</button>
+        <input
+            id="input"
+            placeholder="Tanyakan sesuatu..."
+            autocomplete="off"
+        >
+
+        <button onclick="kirim()">
+            Kirim
+        </button>
+
     </div>
-  </main>
-  <script src="app.js"></script>
+
+</div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
